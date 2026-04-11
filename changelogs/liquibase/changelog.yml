@@ -1,7 +1,4 @@
 databaseChangeLog:
-  - changeSet:
-      id: 1
-      author: Ty Weis
-      changes:
-        - includeAll:
-            path: changelogs/liquibase/changes/
+  - includeAll:
+      path: changes/
+      relativeToChangelogFile: true
