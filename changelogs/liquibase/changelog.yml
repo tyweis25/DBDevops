@@ -1,0 +1,35 @@
+databaseChangeLog:
+  #-  logicalFilePath:  example-changelog.yaml
+  - changeSet:
+      id: my.poc:1
+      author: Ty Weis
+      labels: tag_1
+      context: example-context
+      comment: example comment
+      changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address1
+                  type: VARCHAR(50)
+              - column:
+                  name: address2
+                  type: VARCHAR(50)
+              - column:
+                  name: city
+                  type: VARCHAR(30)
+      rollback:
+        - dropTable:
+            tableName: person
