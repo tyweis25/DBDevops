@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset yourname:1
+--changeset Ty Weis:1
 --comment: Initial setup of the guinea_pig table
 CREATE TABLE guinea_pigs (
     id SERIAL PRIMARY KEY,
