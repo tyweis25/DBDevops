@@ -1,3 +1,4 @@
+--changeset your-name:1
 CREATE TABLE example_table (
     id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     name VARCHAR(255)
