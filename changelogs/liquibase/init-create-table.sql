@@ -1,5 +1,10 @@
---changeset your-name:1
+--liquibase formatted sql
+
+--changeset your.name:1
 CREATE TABLE example_table (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    name VARCHAR(255)
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+--rollback DROP TABLE example_table;
