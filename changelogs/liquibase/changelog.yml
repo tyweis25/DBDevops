@@ -13,16 +13,3 @@ databaseChangeLog:
                   type: int
             tableName: test_table
       comment: Diff Changelog
-  - changeSet:
-      id: 100-0
-      author: ty.weis@harness.io
-      created: 2026-04-28 23:28+0000
-      labels: '100'
-      changes:
-        - addColumn:
-            columns:
-              - column:
-                  name: username
-                  type: varchar(1)
-            tableName: test_table
-      comment: Diff Changelog
