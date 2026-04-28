@@ -2,3 +2,27 @@ databaseChangeLog:
   - includeAll:
       path: changes/
       relativeToChangelogFile: true
+  - changeSet:
+      id: null-0
+      author: 'null'
+      created: 2026-04-28 14:43+0000
+      labels: 'null'
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK__example___3213E83FD9811B19
+                  name: id
+                  type: int
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: varchar(50)
+            tableName: example_table
+      comment: "null"
