@@ -26,3 +26,16 @@ databaseChangeLog:
                   type: varchar(1)
             tableName: test_table
       comment: Add username column
+  - changeSet:
+      id: 300-0
+      author: ty.weis@harness.io
+      created: 2026-04-28 23:53+0000
+      labels: '300'
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: first_name
+                  type: varchar(1)
+            tableName: test_table
+      comment: Create first_name column
