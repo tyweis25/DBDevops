@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset your.name:1
+--changeset Ty Weis:2
 CREATE TABLE example_table (
     id INT PRIMARY KEY,
     name VARCHAR(50) NOT NULL
