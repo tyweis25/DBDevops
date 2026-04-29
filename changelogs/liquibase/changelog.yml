@@ -39,3 +39,27 @@ databaseChangeLog:
                   type: varchar(1)
             tableName: test_table
       comment: Create first_name column
+  - changeSet:
+      id: 400-0
+      author: ty.weis@harness.io
+      created: 2026-04-29 04:24+0000
+      labels: '400'
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK__example___3213E83FB2EC719E
+                  name: id
+                  type: int
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: varchar(50)
+            tableName: example_table
+      comment: create example table
