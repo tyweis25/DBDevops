@@ -23,3 +23,16 @@ databaseChangeLog:
                   type: varchar(50)
             tableName: example_table
       comment: create table
+  - changeSet:
+      id: 600-0
+      author: ty.weis@harness.io
+      created: 2026-04-29 16:38+0000
+      labels: '600'
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: username
+                  type: varchar(1)
+            tableName: example_table
+      comment: create username
