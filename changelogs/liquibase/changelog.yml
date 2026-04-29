@@ -36,3 +36,13 @@ databaseChangeLog:
                   type: varchar(1)
             tableName: example_table
       comment: add username
+  - changeSet:
+      id: 400-0
+      author: ty.weis@harness.io
+      created: 2026-04-29 15:13+0000
+      labels: '400'
+      changes:
+        - dropColumn:
+            columnName: username
+            tableName: example_table
+      comment: drop username column
