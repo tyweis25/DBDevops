@@ -1,1 +1,52 @@
 databaseChangeLog:
+  - changeSet:
+      id: initial create-0
+      author: ty.weis@harness.io
+      created: 2026-05-01 16:09+0000
+      labels: initial create
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  type: int
+            tableName: example_table
+      comment: initial create
+  - changeSet:
+      id: initial create-1
+      author: ty.weis@harness.io
+      created: 2026-05-01 16:09+0000
+      labels: initial create
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: varchar(50)
+            tableName: example_table
+      comment: initial create
+  - changeSet:
+      id: initial create-2
+      author: ty.weis@harness.io
+      created: 2026-05-01 16:09+0000
+      labels: initial create
+      changes:
+        - addPrimaryKey:
+            columnNames: id
+            constraintName: PK__example___3213E83FD040AF55
+            tableName: example_table
+      comment: initial create
+  - changeSet:
+      id: initial create-3
+      author: ty.weis@harness.io
+      created: 2026-05-01 16:09+0000
+      labels: initial create
+      changes:
+        - dropColumn:
+            columnName: username
+            tableName: example_table
+      comment: initial create
