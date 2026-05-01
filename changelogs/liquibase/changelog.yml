@@ -1,2 +1,14 @@
 databaseChangeLog:
-  
+  - changeSet:
+      id: test index policy-0
+      author: ty.weis@harness.io
+      created: 2026-05-01 02:24+0000
+      labels: test index policy
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: username
+            indexName: example_table_username_index
+            tableName: example_table
+      comment: test policy
