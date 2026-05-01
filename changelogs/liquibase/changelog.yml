@@ -52,3 +52,16 @@ databaseChangeLog:
             indexName: example_table_username_index
             tableName: example_table
       comment: create index
+  - changeSet:
+      id: create index-0
+      author: ty.weis@harness.io
+      created: 2026-05-01 02:19+0000
+      labels: create index
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: username
+            indexName: example_table_username_index
+            tableName: example_table
+      comment: create index
