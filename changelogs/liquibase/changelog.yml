@@ -23,4 +23,29 @@ databaseChangeLog:
                   type: varchar(50)
             tableName: example_table
       comment: initial create - test
-
+  - changeSet:
+      id: testpwd-0
+      author: ty.weis@harness.io
+      created: 2026-05-02 04:27+0000
+      labels: testpwd
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: username
+                  type: varchar(255)
+            tableName: example_table
+      comment: testpwd
+  - changeSet:
+      id: testpwd-1
+      author: ty.weis@harness.io
+      created: 2026-05-02 04:27+0000
+      labels: testpwd
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: username
+            indexName: example_table_id_index
+            tableName: example_table
+      comment: testpwd
