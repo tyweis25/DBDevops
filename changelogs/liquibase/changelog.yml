@@ -1,26 +1,13 @@
-databaseChangeLog:
   - changeSet:
-      id: initial create - test-0
+      id: test-1
       author: ty.weis@harness.io
-      created: 2026-05-01 17:32+0000
-      labels: initial create - test
+      created: 2026-05-03 14:48+0000
+      labels: test
       changes:
-        - createTable:
+        - createIndex:
             columns:
               - column:
-                  computed: false
-                  constraints:
-                    nullable: false
-                    primaryKey: true
-                    primaryKeyName: PK__example___3213E83FD040AF55
-                  name: id
-                  type: int
-              - column:
-                  computed: false
-                  constraints:
-                    nullable: false
-                  name: name
-                  type: varchar(50)
+                  name: username
+            indexName: example_table_id_index
             tableName: example_table
-      comment: initial create - test
-
+      comment: test
