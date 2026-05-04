@@ -1,14 +1,2 @@
 databaseChangeLog:
-  - changeSet:
-      id: create index-0
-      author: ty.weis@harness.io
-      created: 2026-05-04 14:56+0000
-      labels: create index
-      changes:
-        - addColumn:
-            columns:
-              - column:
-                  name: username
-                  type: varchar(255)
-            tableName: example_table
-      comment: create index
+
