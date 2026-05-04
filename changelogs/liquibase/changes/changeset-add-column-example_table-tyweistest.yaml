@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: testing indexes-0
+      author: ty.weis@harness.io
+      created: 2026-05-04 21:46+0000
+      labels: testing indexes
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: tyweistest
+                  type: int
+            tableName: example_table
+      comment: testing indexes
