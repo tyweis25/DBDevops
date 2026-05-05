@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1234-1
+      author: ty.weis@harness.io
+      created: 2026-05-05 21:09+0000
+      labels: 1234
+      changes:
+        - dropIndex:
+            indexName: example_table_id_index_2
+            tableName: example_table
+      comment: drop
