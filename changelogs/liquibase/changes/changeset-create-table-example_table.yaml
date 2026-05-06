@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 12345-0
+      author: ty.weis@harness.io
+      created: 2026-05-06 05:18+0000
+      labels: 12345
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK__example___3213E83F1E1C0044
+                  name: id
+                  type: int
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: varchar(50)
+            tableName: example_table
+      comment: create table example
