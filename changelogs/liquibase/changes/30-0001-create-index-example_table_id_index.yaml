@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: test naming-1
+      author: ty.weis@harness.io
+      created: 2026-05-06 15:12+0000
+      labels: test naming
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: username
+            indexName: example_table_id_index
+            tableName: example_table
+      comment: test naming
