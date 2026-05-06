@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 345678-0
+      author: ty.weis@harness.io
+      created: 2026-05-06 13:35+0000
+      labels: 345678
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: test_rollback
+                  type: int
+            tableName: example_table
+      comment: test rollback
