@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: test branch names-1
+      author: ty.weis@harness.io
+      created: 2026-05-06 15:49+0000
+      labels: test branch names
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: username
+            indexName: example_table_id_index
+            tableName: example_table
+      comment: test branch names
