@@ -1,9 +1,9 @@
 databaseChangeLog:
   - changeSet:
-      id: start clean-0
+      id: 12345-0
       author: ty.weis@harness.io
-      created: 2026-05-04 21:01+0000
-      labels: start clean
+      created: 2026-05-06 03:39+0000
+      labels: 12345
       changes:
         - createTable:
             columns:
@@ -26,4 +26,4 @@ databaseChangeLog:
                   name: username
                   type: varchar(255)
             tableName: example_table
-      comment: start clean
+      comment: create table
