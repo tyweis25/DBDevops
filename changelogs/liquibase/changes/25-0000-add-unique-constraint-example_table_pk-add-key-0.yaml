@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add key-0
+      author: ty.weis@harness.io
+      created: 2026-05-06 16:58+0000
+      labels: add key
+      changes:
+        - addUniqueConstraint:
+            columnNames: name
+            constraintName: example_table_pk
+            tableName: example_table
+      comment: add key
