@@ -1,1 +1,17 @@
 databaseChangeLog:
+  - changeSet:
+      id: add-test-column-to-example-table
+      author: Ty Weis
+      comment: Adding test column with VARCHAR(90) type to example_table
+      labels: ""
+      changes:
+        - addColumn:
+            tableName: example_table
+            columns:
+              - column:
+                  name: test
+                  type: VARCHAR(90)
+      rollback:
+        - dropColumn:
+            tableName: example_table
+            columnName: test
