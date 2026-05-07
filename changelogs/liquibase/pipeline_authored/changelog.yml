@@ -15,3 +15,27 @@ databaseChangeLog:
         - dropColumn:
             tableName: example_table
             columnName: test
+  - changeSet:
+      id: add-tytest-column-to-example-table
+      author: Ty Weis
+      comment: Add tytest column of type int to example_table
+      labels: ""
+      preConditions:
+        - onFail: HALT
+        - tableExists:
+            tableName: example_table
+        - not:
+            - columnExists:
+                tableName: example_table
+                columnName: tytest
+      changes:
+        - addColumn:
+            tableName: example_table
+            columns:
+              - column:
+                  name: tytest
+                  type: INT
+      rollback:
+        - dropColumn:
+            tableName: example_table
+            columnName: tytest
