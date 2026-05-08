@@ -1,4 +1,7 @@
 databaseChangeLog:
+  - includeAll:
+      path: changes/
+      relativeToChangelogFile: true
   - changeSet:
       id: create example table-0
       author: ty.weis@harness.io
