@@ -27,16 +27,3 @@ databaseChangeLog:
                   type: varchar(90)
             tableName: example_table
       comment: create example table
-  - changeSet:
-      id: validate rollback-0
-      author: ty.weis@harness.io
-      created: 2026-05-08 04:33+0000
-      labels: validate rollback
-      changes:
-        - addColumn:
-            columns:
-              - column:
-                  name: validate_rollback
-                  type: int
-            tableName: example_table
-      comment: validate rollback
