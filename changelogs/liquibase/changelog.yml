@@ -2,29 +2,3 @@ databaseChangeLog:
   - includeAll:
       path: changes/
       relativeToChangelogFile: true
-  - changeSet:
-      id: 12345-0
-      author: ty.weis@harness.io
-      created: 2026-05-07 01:26+0000
-      labels: '12345'
-      changes:
-        - addColumn:
-            columns:
-              - column:
-                  name: username
-                  type: varchar(50)
-            tableName: example_table
-      comment: test diff
-  - changeSet:
-      id: test-diff-123-0
-      author: ty.weis@harness.io
-      created: 2026-05-08 01:42+0000
-      labels: test-diff-123
-      changes:
-        - addColumn:
-            columns:
-              - column:
-                  name: test_diff
-                  type: int
-            tableName: example_table
-      comment: test diff
