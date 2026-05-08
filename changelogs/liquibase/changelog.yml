@@ -15,3 +15,16 @@ databaseChangeLog:
                   type: varchar(50)
             tableName: example_table
       comment: test diff
+  - changeSet:
+      id: test-diff-123-0
+      author: 'null'
+      created: 2026-05-08 01:42+0000
+      labels: test-diff-123
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: test_diff
+                  type: int
+            tableName: example_table
+      comment: test diff
