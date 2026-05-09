@@ -33,3 +33,20 @@ databaseChangeLog:
       rollback:
         - dropTable:
             tableName: example_table
+  - changeSet:
+      id: test env variables-0
+      author: ty.weis@harness.io
+      created: 2026-05-09 03:25+0000
+      labels: test env variables
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: validate_rollback
+                  type: int
+            tableName: example_table
+      comment: test env variables
+      rollback:
+        - dropColumn:
+            tableName: example_table
+            columnName: validate_rollback
