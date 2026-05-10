@@ -15,3 +15,19 @@ databaseChangeLog:
         - dropColumn:
             tableName: example_table
             columnName: test
+  - changeSet:
+      id: add-test-column-to-example-table
+      author: harness-ai
+      changes:
+        - addColumn:
+            tableName: example_table
+            columns:
+              - column:
+                  name: test_column
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+      rollback:
+        - dropColumn:
+            tableName: example_table
+            columnName: test_column
