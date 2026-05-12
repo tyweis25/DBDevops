@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create index-1
+      author: ty.weis@harness.io
+      created: 2026-05-12 14:32+0000
+      labels: create index
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: name
+            indexName: Index_example_table_1
+            tableName: example_table
+      rollback:
+        - dropIndex:
+            indexName: Index_example_table_1
+            tableName: example_table
+      comment: creeate index
