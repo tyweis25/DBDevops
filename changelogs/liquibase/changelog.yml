@@ -33,13 +33,3 @@ databaseChangeLog:
       rollback:
         - dropTable:
             tableName: example_table
-  - changeSet:
-      id: test rename-1
-      author: ty.weis@harness.io
-      created: 2026-05-13 16:11+0000
-      labels: test rename
-      changes:
-        - renameTable:
-            oldTableName: example_table
-            newTableName: rename_table
-      comment: test rename
