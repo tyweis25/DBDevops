@@ -39,7 +39,7 @@ databaseChangeLog:
       created: 2026-05-13 16:11+0000
       labels: test rename
       changes:
-        - renametable:
+        - renameTable:
             oldTableName: example_table
             newTableName: rename_table
       comment: test rename
