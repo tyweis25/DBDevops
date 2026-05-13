@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: test-0
+      author: ty.weis@harness.io
+      created: 2026-05-13 17:34+0000
+      labels: test
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK__example___3213E83F552B4D54
+                  name: id
+                  type: int
+              - column:
+                  computed: false
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: varchar(50)
+              - column:
+                  computed: false
+                  name: test
+                  type: varchar(90)
+            tableName: rename_table
+      rollback:
+        - dropTable:
+            tableName: rename_table
+      comment: test
