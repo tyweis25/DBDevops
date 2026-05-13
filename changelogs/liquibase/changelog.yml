@@ -33,3 +33,37 @@ databaseChangeLog:
       rollback:
         - dropTable:
             tableName: example_table
+  - changeSet:
+      id: test variables-0
+      author: ty.weis@harness.io
+      created: 2026-05-13 04:46+0000
+      labels: test variables
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: validate_rollback
+                  type: int
+            tableName: example_table
+      comment: test variables
+      rollback:
+        - dropColumn:
+            tableName: example_table
+            columnName: validate_rollback
+  - changeSet:
+      id: test variables-1
+      author: ty.weis@harness.io
+      created: 2026-05-13 04:46+0000
+      labels: test variables
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: name
+            indexName: Index_example_table_1
+            tableName: example_table
+      comment: test variables
+      rollback:
+        - dropIndex:
+            indexName: Index_example_table_1
+            tableName: example_table
