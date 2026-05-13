@@ -39,6 +39,7 @@ databaseChangeLog:
       created: 2026-05-13 19:13+0000
       labels: test tytable
       changes:
-        - dropTable:
-            tableName: example_table
+        - renameTable:
+            oldTableName: example_table
+            newTableName: ty_table
       comment: test tytable
