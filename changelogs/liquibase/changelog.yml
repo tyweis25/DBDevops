@@ -1,35 +1,48 @@
 databaseChangeLog:
-  - includeAll:
-      path: changes/
-      relativeToChangelogFile: true
+  includeAll:
+    path: changes/
+    relativeToChangelogFile: true
+  changeSet:
+    id: create example table-0
+    author: ty.weis@harness.io
+    created: 2026-05-08 03:48+0000
+    labels: create example table
+    changes:
+      - createTable:
+          columns:
+            - column:
+                computed: false
+                constraints:
+                  nullable: false
+                  primaryKey: true
+                  primaryKeyName: PK__example___3213E83F552B4D54
+                name: id
+                type: int
+            - column:
+                computed: false
+                constraints:
+                  nullable: false
+                name: name
+                type: varchar(50)
+            - column:
+                computed: false
+                name: test
+                type: varchar(90)
+          tableName: example_table
+    comment: create example table
+    rollback:
+      - dropTable:
+          tableName: example_table
   - changeSet:
-      id: create example table-0
+      id: rename-example_table-to-ty_table-05192026-1713
       author: ty.weis@harness.io
-      created: 2026-05-08 03:48+0000
-      labels: create example table
+      created: 2026-05-19
       changes:
-        - createTable:
-            columns:
-              - column:
-                  computed: false
-                  constraints:
-                    nullable: false
-                    primaryKey: true
-                    primaryKeyName: PK__example___3213E83F552B4D54
-                  name: id
-                  type: int
-              - column:
-                  computed: false
-                  constraints:
-                    nullable: false
-                  name: name
-                  type: varchar(50)
-              - column:
-                  computed: false
-                  name: test
-                  type: varchar(90)
-            tableName: example_table
-      comment: create example table
+        - renameTable:
+            oldTableName: example_table
+            newTableName: ty_table
       rollback:
-        - dropTable:
-            tableName: example_table
+        - renameTable:
+            oldTableName: ty_table
+            newTableName: example_table
+      comment: Rename table example_table to ty_table [auto-generated]
